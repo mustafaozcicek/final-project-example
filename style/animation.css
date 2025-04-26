@@ -1,0 +1,75 @@
+.ball {
+
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    animation: bouncyball 600s;
+    animation-iteration-count: infinite;
+    /* animation-name: ; */
+    /* animation-duration: ; */
+    /* animation-delay: 1s; */
+    
+    animation-direction: alternate;
+    /* animation-fill-mode: ; */
+    /* animation-play-state: ; */  
+}
+
+.ball:hover {
+
+    animation-play-state: paused;
+}
+
+.ball1 { 
+    animation-timing-function: ease;
+    background-color: blueviolet;
+}
+
+.ball2 {
+    animation-timing-function: ease-in;
+    background-color: rgb(125, 195, 12);
+}
+
+.ball3 {
+    animation-timing-function: ease-out;
+    background-color: rgb(43, 208, 226);
+}
+
+.ball4 { animation-timing-function: ease-in-out;
+        background-color: brown;
+}
+
+.ball5 { animation-timing-function: linear;
+    background-color: rgb(224, 31, 154);
+}
+
+.ball6 { animation-timing-function: cubic-bezier(.5, 0, .5, 1);
+    background-color: rgb(241, 172, 10);
+}
+
+@keyframes bouncyball {
+
+    0% {
+
+        transform: translateX(1px);
+        border-radius: 0;
+        font-size: 2rem;
+    }
+
+    50% { 
+        border-radius: 100%; 
+        color: white;
+    
+    }
+
+    100% {
+
+        transform: translateX(500px);
+        border-radius: 0;
+        font-size: 4rem;
+    }
+    
+}
+
